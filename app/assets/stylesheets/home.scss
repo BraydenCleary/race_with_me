@@ -1,0 +1,21 @@
+@import "foundation";
+
+#races-container-row{
+  @extend .row;
+
+  .races{
+    @extend .columns;
+    @extend .large-8;
+    @extend .small-12;
+
+    .race-row{
+      @extend .row;
+
+      .race{
+        @extend .columns;
+        @extend .large-4;
+        @extend .small-12;
+      }
+    }
+  }
+}
