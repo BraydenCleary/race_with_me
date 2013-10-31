@@ -12,7 +12,6 @@ gem 'pg'
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -22,6 +21,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'faker'
 end
 
 group :production do
@@ -29,12 +29,17 @@ group :production do
 end
 
 gem 'jquery-rails'
+gem 'haml-rails'
+gem 'paperclip'
+gem 'underscore-rails'
+gem 'compass-rails'
+gem 'zurb-foundation', '~> 4.0.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
-# gem 'jbuilder'
+gem 'jbuilder'
 
 # Use unicorn as the app server
 # gem 'unicorn'
