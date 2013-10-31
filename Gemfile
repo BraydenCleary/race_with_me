@@ -21,12 +21,12 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'faker'
 end
 
 group :production do
   gem 'rails_12factor'
 end
+
 
 gem 'jquery-rails'
 gem 'haml-rails'
@@ -34,6 +34,7 @@ gem 'paperclip'
 gem 'underscore-rails'
 gem 'compass-rails'
 gem 'zurb-foundation', '~> 4.0.0'
+gem 'faker'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
