@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+def rand_in_range(from, to)
+  rand * (to - from) + from
+end
+
+def rand_time(from, to=Time.now)
+  Time.at(rand_in_range(from.to_f, to.to_f))
+end
+
+50.times { Race.create(name: Faker::Name.name, description: Faker::Lorem.paragraph, race_date: rand_time(Time.now - 300.days))}
