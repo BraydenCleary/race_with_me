@@ -1,0 +1,9 @@
+#races-container-row
+  .races{"ng-controller" => "racesController"}
+    .race-row
+      .race{"ng-repeat" => "race in races"}
+        %img.race-img{src: "/assets/race.jpg"}
+        .name{"ng-bind" => "race.name"}
+        .description{"ng-bind" => "race.description"}
+        .date{"ng-bind" => "race.race_date"}
+
