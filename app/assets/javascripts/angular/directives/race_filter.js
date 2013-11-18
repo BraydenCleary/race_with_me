@@ -4,8 +4,7 @@ raceTogether.directive("raceFilter", [function(){
     link: function($scope, el, attrs){
       el.bind('click', function(){
         var raceFilter = $(this).attr('race-filter');
-        $('.filter').removeClass('active');
-        $(this).addClass('active');
+        changeActiveButton();
         if (raceFilter == 'all'){
           $scope.races = $scope.allRaces;
         } else {
@@ -18,6 +17,11 @@ raceTogether.directive("raceFilter", [function(){
         $scope.races = _.filter($scope.allRaces, function(race){
           return race.race_type == raceFilter;
         })
+      }
+
+      changeActiveButton = function(){
+        $('.filter').removeClass('active');
+        $(this).addClass('active');
       }
     }
   }
