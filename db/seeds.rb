@@ -14,4 +14,6 @@ def rand_time(from, to=Time.now)
   Time.at(rand_in_range(from.to_f, to.to_f))
 end
 
-50.times { Race.create(name: Faker::Name.name, description: Faker::Lorem.paragraph, race_date: rand_time(Time.now - 300.days))}
+race_types = ["running", "biking", "triathlon"]
+
+50.times { Race.create(name: Faker::Name.name, description: Faker::Lorem.paragraph, race_type: race_types.sample ,race_date: rand_time(Time.now - 300.days))}
