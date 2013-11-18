@@ -13,10 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= require underscore
 //= require_tree ./third-party/
 //= require_tree ./angular/modules/
 //= require_tree ./angular/services/
 //= require_tree ./angular/controllers/
+//= require_tree ./angular/directives/
 //= require_tree .
 
 $(document).foundation();

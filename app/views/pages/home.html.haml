@@ -1,13 +1,14 @@
-#home
-  %h3.reason Tired or paying $250 for a marathon or $400 for a triathlon?
-  %h3.solution We are too. Let's Race Together.
+#welcome
+  %h3.intro Tired or paying $250 for a marathon or $400 for a triathlon? We are too. Let's Race Together.
 
-#races-container-row
+#races
   .races{"ng-controller" => "racesController"}
-    .race-row
-      .race{"ng-repeat" => "race in races"}
-        %img.race-img{src: "/assets/race.jpg"}
-        .name{"ng-bind" => "race.name"}
-        .description{"ng-bind" => "race.description"}
-        .date{"ng-bind" => "race.race_date"}
+    .filters{"filter-race-type-buttons" => true}
+      .race-type Race Type:
+    .race{"ng-repeat" => "race in races"}
+      %img.race-img{src: "/assets/race.jpg"}
+      .name{"ng-bind" => "race.name"}
+      .type{"ng-bind" => "race.race_type"}
+      .description{"ng-bind" => "race.description"}
+      .date{"ng-bind" => "race.race_date"}
 

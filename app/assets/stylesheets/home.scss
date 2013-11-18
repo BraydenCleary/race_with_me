@@ -1,21 +1,52 @@
 @import "foundation";
 
-#races-container-row{
-  @extend .row;
+.left-adjusted{
+  @extend .columns;
+  @extend .large-8;
+  @extend .small-12;
+}
+
+#welcome{
+  @extend .left-adjusted;
+}
+
+#races{
+  @extend .left-adjusted;
 
   .races{
-    @extend .columns;
-    @extend .large-8;
-    @extend .small-12;
+    @extend .row;
 
-    .race-row{
-      @extend .row;
+    .race-type{
+      font-weight: bold;
+    }
 
-      .race{
+    .filters{
+      @extend .columns;
+      @extend .large-12;
+      @extend .small-12;
+      margin-bottom: 10px;
+
+      .race-type{
         @extend .columns;
-        @extend .large-4;
-        @extend .small-12;
+        @extend .large-2;
+        @extend .small-2;
+        padding: 0;
       }
+
+      .filter{
+        margin-right: 5px;
+        margin-bottom: 0;
+
+        &.active{
+          background-color: #00B1FF;
+        }
+      }
+    }
+
+    .race{
+      @extend .columns;
+      @extend .large-4;
+      @extend .small-12;
     }
   }
 }
